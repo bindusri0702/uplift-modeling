@@ -8,6 +8,14 @@ The notebook walks through the complete workflow—from exploratory analysis and
 
 ---
 
+## Business Impact
+
+Blanket ad targeting wastes spend on customers who would have converted anyway ("sure things") and on those who will never convert regardless of exposure ("lost causes" and "sleeping dogs"). Uplift modeling isolates the segment that only converts **because** they were targeted — the *persuadable* customers — and ranks the population by that incremental effect.
+
+**Headline result:** the best model (X-Learner) achieved a Qini coefficient of **0.069**, roughly 6.9x higher than the random-targeting baseline (0.01) — meaning it identifies persuadable customers far more effectively than chance, even though the absolute value looks small at first glance.
+
+---
+
 ## Problem Statement
 
 Marketing campaigns are expensive, and showing advertisements to every customer is rarely optimal.
@@ -168,16 +176,21 @@ The comparison highlights the strengths and limitations of different causal mach
 
 ---
 
-## Evaluation Metrics
+## Results & Evaluation Metrics
 
-The project evaluates causal effects using:
+### Model Comparison
 
-* Intent-to-Treat (ITT)
-* Average Treatment Effect (ATE)
-* Conditional Average Treatment Effect (CATE)
+| Model | Qini Coefficient | AUUC | Notes |
+|---|---|---|---|
+| T-Learner | 0.01 | 0.009 | Baseline meta-learner; two independent models |
+| **X-Learner** | 0.069 | 0.027 | LightGBM base learner; handles treatment/control imbalance |
+| R-Learner | 0.067 | 0.024 | Residual-on-residual regression |
+| Causal GBM (XGBoost) | 0.055 | 0.021 | Tree based CATE |
 
-The notebook also demonstrates uplift estimation for individual users.
+### Qini Curve
 
----
+<img width="365" height="286" alt="image" src="https://github.com/user-attachments/assets/3b907357-dc8f-4ccb-a897-5499031c0075" />
+
+<img width="365" height="278" alt="image" src="https://github.com/user-attachments/assets/9b75b543-feda-4b04-a876-26199bd1df31" />
 
 This distinction enables more efficient marketing campaigns by targeting only customers who are expected to respond positively to an intervention, reducing unnecessary advertising costs and improving campaign ROI.
