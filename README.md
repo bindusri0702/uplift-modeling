@@ -111,6 +111,50 @@ The notebook implements several meta-learning approaches for uplift modeling.
 * Answers - What value of $\tau(X)$ best explains the residualized outcome using the residualized treatment?
 * solves for residual-on-residual regression.
 
+---
+
+## Causal Gradient Boosting (XGBoost)
+
+Implemented a tree-based causal boosting model using **XGBoost** as the base learner to estimate heterogeneous treatment effects.
+
+Features:
+
+* Gradient-boosted decision trees
+* Nonlinear treatment effect estimation
+* Handles complex feature interactions
+* High predictive performance on structured datasets
+
+---
+# Model Evaluation
+
+Unlike traditional classification tasks, uplift models require specialized evaluation metrics.
+
+The project evaluates each causal learner using:
+
+* Average Treatment Effect (ATE)
+* Conditional Average Treatment Effect (CATE)
+* Individual Uplift Scores
+* Qini Curve
+* Qini Coefficient
+* Area Under the Uplift Curve (AUUC)
+
+These metrics measure how effectively each model identifies customers who benefit from treatment.
+
+---
+
+# Model Comparison
+
+A comparative analysis is performed across multiple causal learners based on:
+
+* Treatment effect estimation
+* Individual uplift prediction
+* AUUC
+* Qini coefficient
+
+The comparison highlights the strengths and limitations of different causal machine learning approaches for uplift modeling.
+
+---
+
 ## Technologies Used
 
 * Python
