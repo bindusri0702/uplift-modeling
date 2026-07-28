@@ -180,19 +180,4 @@ The notebook also demonstrates uplift estimation for individual users.
 
 ---
 
-## Learning Outcomes
-
-This project demonstrates understanding of:
-
-* Causal inference fundamentals
-* Randomized treatment analysis
-* Intent-to-Treat estimation
-* Average Treatment Effect (ATE)
-* Conditional Average Treatment Effect (CATE)
-* Meta-learning for uplift modeling
-* T-Learner implementation
-* X-Learner implementation
-* Personalized treatment effect estimation
-* Marketing campaign optimization using causal machine learning
-
 This distinction enables more efficient marketing campaigns by targeting only customers who are expected to respond positively to an intervention, reducing unnecessary advertising costs and improving campaign ROI.
