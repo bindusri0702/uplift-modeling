@@ -182,15 +182,13 @@ The comparison highlights the strengths and limitations of different causal mach
 
 | Model | Qini Coefficient | AUUC | Notes |
 |---|---|---|---|
-| T-Learner | 0.01 | 0.009 | Baseline meta-learner; two independent models |
-| **X-Learner** | 0.069 | 0.027 | LightGBM base learner; handles treatment/control imbalance |
-| R-Learner | 0.067 | 0.024 | Residual-on-residual regression |
-| Causal GBM (XGBoost) | 0.055 | 0.021 | Tree based CATE |
+| T-Learner |0.116089 | 0.046146 | Baseline meta-learner; two independent models |
+| **X-Learner** | 0.074617 | 0.029584 | LightGBM base learner; handles treatment/control imbalance |
+| R-Learner | 0.059318 | 0.023434 | Residual-on-residual regression |
+| Causal GBM (XGBoost) | 0.002157 | 0.000865 | Tree based CATE |
 
-### Qini Curve
+<img width="359" height="278" alt="uplift_comparisons" src="https://github.com/user-attachments/assets/3b03cbeb-75e5-441c-9c06-a9027d6b6f50" />
 
-<img width="365" height="286" alt="image" src="https://github.com/user-attachments/assets/3b907357-dc8f-4ccb-a897-5499031c0075" />
-
-<img width="365" height="278" alt="image" src="https://github.com/user-attachments/assets/9b75b543-feda-4b04-a876-26199bd1df31" />
+<img width="359" height="278" alt="qini_comparisons" src="https://github.com/user-attachments/assets/f8802fc4-241a-42b6-a39e-f62efac19288" />
 
 This distinction enables more efficient marketing campaigns by targeting only customers who are expected to respond positively to an intervention, reducing unnecessary advertising costs and improving campaign ROI.
